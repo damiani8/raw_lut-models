@@ -29,3 +29,13 @@ sRGB-encoded and normalised with ImageNet's mean and deviation, and give 1 x 1 x
 |---|---|
 | `subject_birefnet_lite_fp16.onnx` | `d39b897ceb16ae654c1731f3dba0cf9b368d9cae74b5a57459b455cc8bfec402` |
 | `sky_u2net_fp16.onnx` | `74d87f4a69378a610a6be662f859c38cfbdfdd75ff74bbfc54842965ed6fc9f7` |
+
+## denoise-1
+
+AI noise reduction (the app's `server/ai_denoise.py`): NAFNet width 32 trained on SIDD by Liangyu Chen et al. ([megvii-research/NAFNet](https://github.com/megvii-research/NAFNet)),
+the half-precision ONNX export of [mlboydaisuke/NAFNet-SIDD-width32-OpenVINO](https://huggingface.co/mlboydaisuke/NAFNet-SIDD-width32-OpenVINO) as it is. 1 x 3 x 256 x 256
+sRGB-curve codes (0 to 1) in and out. MIT licence (`LICENSE-NAFNet`).
+
+| File | SHA-256 |
+|---|---|
+| `nafnet_sidd_width32_fp16.onnx` | `a9ca266868fad47ce1d19ae2677809e8e69a3c131afbe54ba24c431fe0dc069a` |
