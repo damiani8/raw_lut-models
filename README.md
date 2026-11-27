@@ -30,6 +30,18 @@ sRGB-encoded and normalised with ImageNet's mean and deviation, and give 1 x 1 x
 | `subject_birefnet_lite_fp16.onnx` | `d39b897ceb16ae654c1731f3dba0cf9b368d9cae74b5a57459b455cc8bfec402` |
 | `sky_u2net_fp16.onnx` | `74d87f4a69378a610a6be662f859c38cfbdfdd75ff74bbfc54842965ed6fc9f7` |
 
+## masks-2
+
+The Person mask of Local adjustments (the app's `server/ai_masks.py` and `server/mask_models.py`), taking and giving what `masks-1`'s subject model does.
+
+- `person_birefnet_portrait_fp16.onnx`: BiRefNet trained on portraits (P3M-10k) by Zheng Peng et al. ([ZhengPeng7/BiRefNet-portrait](https://huggingface.co/ZhengPeng7/BiRefNet-portrait)),
+  the half-precision ONNX export of [onnx-community/BiRefNet-portrait-ONNX](https://huggingface.co/onnx-community/BiRefNet-portrait-ONNX) as it is; N = 1024, logits out.
+  MIT licence (`LICENSE-BiRefNet`).
+
+| File | SHA-256 |
+|---|---|
+| `person_birefnet_portrait_fp16.onnx` | `4c05930c0b6f1418d02eb1de81c46fe37638ba54f5a93adeb5c674521db10110` |
+
 ## denoise-1
 
 AI noise reduction (the app's `server/ai_denoise.py`): NAFNet width 32 trained on SIDD by Liangyu Chen et al. ([megvii-research/NAFNet](https://github.com/megvii-research/NAFNet)),
